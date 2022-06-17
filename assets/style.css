@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.mainForm{
+    height:calc(100vh - 9vh);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2%;
+}
+.fileUploadContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5%;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div height="100vh">
+      <%- include("./common/Nevbar") %>
+      <!-- <% if(typeof(name)!="undefined"){%><h1>Welcome <%- name %></h1><% }%> -->
+      <% if(typeof(error)!="undefined"){%>
+        <div class="alert alert-danger" role="alert">
+          <%- error %>
+        </div>
+
+      <%}%>
+      <% if(typeof(masg)!="undefined"){%>
+        <div class="alert alert-success" role="alert">
+          <%- masg %>
+        </div>
+
+      <%}%>
+      <div class="mainForm">
+        <div class="fileUploadContainer">
+          <form method="post" enctype="multipart/form-data" action="/stream">
+            <div style="text-align: center">
+              <div class="input-group mb-3">
+                <input type="file" name="file1" class="form-control" id="inputGroupFile02" />
+              </div>
+              <button width="100%" type="submit" class="btn btn-primary">
+                USING STREAM
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="fileUploadContainer">
+          <form method="post" enctype="multipart/form-data" action="/multer">
+            <div style="text-align: center">
+              <div class="input-group mb-3">
+                <input type="file" name="file1" class="form-control" id="inputGroupFile02" />
+              </div>
+              <button type="submit" class="btn btn-primary" width="100%">
+                USING MULTER
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
