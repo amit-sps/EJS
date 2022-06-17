@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 .mainForm{
-    height:calc(100vh - 9vh);
+    height:calc(100vh - 25vh);
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 2%;
